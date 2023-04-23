@@ -18,4 +18,4 @@ jobs:
       with:
         platform: x64
     - name: make
-      run: mingw/x86_64/make
+      run: make -C mingw/x86_64/
