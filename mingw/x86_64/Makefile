@@ -14,11 +14,13 @@ ifeq ($(msys_version),1)
 endif
 
 ifeq ($(msys_version),2)
+  $(info 1)
   WINRES = /opt/bin/$(PLAT)-w64-mingw32-windres
   BIN_SRC = /mingw64/bin/
   INC_SRC = /mingw64/include/
   LIB_SRC = /mingw64/lib/
 else
+  $(info 0)
   WINRES = $(PLAT)-w64-mingw32-windres
   BIN_SRC = /usr/local/$(PLAT)-w64-mingw32/bin/
   INC_SRC = /usr/local/$(PLAT)-w64-mingw32/include/
