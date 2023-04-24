@@ -6,14 +6,32 @@ on:
   pull_request:
     branches: [ "main" ]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
 
     runs-on: windows-latest
 
+    defaults:
+      run:
+        shell: msys2 {0}
+
     steps:
-    - uses: actions/checkout@v3
-    - name: install dependencies
-      run: pacman -S mingw-w64-x86_64-SDL2 mingw-w64-x86_64-SDL2_mixer mingw-w64-x86_64-SDL2_image mingw-w64-clang-x86_64-libzip
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Setup MSYS2 and install packages
+      uses: msys2/setup-msys2@v2
+      with:
+        update: true
+        install: >-
+          mingw-w64-clang-x86_64-SDL2
+          mingw-w64-clang-x86_64-SDL2_mixer
+          mingw-w64-clang-x86_64-SDL2_image
+          mingw-w64-clang-x86_64-libzip
+    
     - name: make
       run: make -C mingw/x86_64/
