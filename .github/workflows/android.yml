@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ "main" ]
 
-concurrency:         
+concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
@@ -28,7 +28,7 @@ jobs:
         java-version: 11
     - name: Setup Gradle
       uses: gradle/gradle-build-action@v2
-    
+
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle

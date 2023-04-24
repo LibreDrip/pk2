@@ -36,12 +36,12 @@ jobs:
           mingw-w64-x86_64-SDL2_image
           mingw-w64-x86_64-libzip
           mingw-w64-cross-binutils
-    
+
     - name: make
       run: make -C mingw/x86_64/
-     
+
     - name: upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: win64-nightly
-        path: mingw/x86_64/PK2/ 
+        path: mingw/x86_64/PK2/
