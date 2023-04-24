@@ -28,7 +28,7 @@ jobs:
       with:
         update: true
         install: >-
-          mingw-w64-clang-x86_64-make
+          make
           mingw-w64-clang-x86_64-SDL2
           mingw-w64-clang-x86_64-SDL2_mixer
           mingw-w64-clang-x86_64-SDL2_image
