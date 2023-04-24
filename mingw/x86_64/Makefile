@@ -40,9 +40,11 @@ endif
 
 ifeq ("$(wildcard $(/usr/local/$(PLAT)-w64-mingw32/include/))","")
   INC_SRC = /mingw64/include/
+endif
 
 ifeq ("$(wildcard $(/usr/local/$(PLAT)-w64-mingw32/lib/))","")
   LIB_SRC = /mingw64/lib/
+endif
 
 
 -include ../mingw.mk
