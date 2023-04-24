@@ -11,7 +11,7 @@ OPT = -O2
 # LIB_SRC = /usr/local/$(PLAT)-w64-mingw32/lib/
 
 # MSYS2
-CXX = /usr/bin/
+CXX = /mingw64/bin/
 WINRES = /opt/bin/
 
 BIN_SRC = /mingw64/bin/
