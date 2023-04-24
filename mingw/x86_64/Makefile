@@ -4,7 +4,7 @@ PLAT = x86_64
 OPT = -O2
 
 CXX = $(PLAT)-w64-mingw32-g++
-WINRES = $(PLAT)-w64-mingw32-windres
+# WINRES = $(PLAT)-w64-mingw32-windres
 
 # BIN_SRC = /usr/local/$(PLAT)-w64-mingw32/bin/
 # INC_SRC = /usr/local/$(PLAT)-w64-mingw32/include/
@@ -12,7 +12,7 @@ WINRES = $(PLAT)-w64-mingw32-windres
 
 # MSYS2
 # CXX = /mingw64/bin/
-# WINRES = /opt/bin/
+WINRES = /opt/bin/$(PLAT)-w64-mingw32-windres
 
 BIN_SRC = /mingw64/bin/
 INC_SRC = /mingw64/include/
