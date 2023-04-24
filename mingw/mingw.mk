@@ -83,7 +83,7 @@ copyfiles:
 	@cp /mingw64/share/licenses/libogg/COPYING $(LICENSES)/LICENSE.ogg-vorbis.txt
   else
 	@cp $(BIN_SRC)LICENSE.ogg-vorbis.txt $(LICENSES)
-	endif
+  endif
 
 	@cp $(BIN_SRC)libmodplug-1.dll $(BIN_DIR)
   ifeq ("$(wildcard $($(BIN_SRC)LICENSE.modplug.txt))","")
