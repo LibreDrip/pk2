@@ -35,6 +35,7 @@ jobs:
           mingw-w64-x86_64-SDL2_mixer
           mingw-w64-x86_64-SDL2_image
           mingw-w64-x86_64-libzip
+          mingw-w64-cross-binutils
     
     - name: make
       run: make -C mingw/x86_64/
