@@ -98,11 +98,11 @@ copyfiles:
 	
 	# msys2 license locations TODO detect msys2
 	@cp /mingw64/share/licenses/libogg/COPYING $(LICENSES)/LICENSE.ogg-vorbis.txt
-        @cp /mingw64/share/licenses/libmodplug/LICENSE $(LICENSES)/LICENSE.modplug.txt
-        @cp /mingw64/share/licenses/mpg123/COPYING $(LICENSES)/LICENSE.mpg123.txt
-        @cp /mingw64/share/licenses/libpng/LICENSE $(LICENSES)/LICENSE.png.txt
-        @cp /mingw64/share/licenses/zlib/LICENSE $(LICENSES)/LICENSE.zlib.txt
-        @cp /mingw64/share/licenses/libzip/LICENSE $(LICENSES)/LICENSE.libzip.txt
+	@cp /mingw64/share/licenses/libmodplug/LICENSE $(LICENSES)/LICENSE.modplug.txt
+	@cp /mingw64/share/licenses/mpg123/COPYING $(LICENSES)/LICENSE.mpg123.txt
+	@cp /mingw64/share/licenses/libpng/LICENSE $(LICENSES)/LICENSE.png.txt
+	@cp /mingw64/share/licenses/zlib/LICENSE $(LICENSES)/LICENSE.zlib.txt
+	@cp /mingw64/share/licenses/libzip/LICENSE $(LICENSES)/LICENSE.libzip.txt
 	# end
 	
 	@cp $(BIN_SRC)SDL2.dll $(BIN_DIR)
