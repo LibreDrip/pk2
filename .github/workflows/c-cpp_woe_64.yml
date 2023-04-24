@@ -31,10 +31,10 @@ jobs:
           git
           make
           mingw-w64-x86_64-gcc
-          mingw-w64-clang-x86_64-SDL2
-          mingw-w64-clang-x86_64-SDL2_mixer
-          mingw-w64-clang-x86_64-SDL2_image
-          mingw-w64-clang-x86_64-libzip
+          mingw-w64-x86_64-SDL2
+          mingw-w64-x86_64-SDL2_mixer
+          mingw-w64-x86_64-SDL2_image
+          mingw-w64-x86_64-libzip
     
     - name: make
       run: make -C mingw/x86_64/
