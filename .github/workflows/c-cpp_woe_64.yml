@@ -29,7 +29,7 @@ jobs:
         update: true
         install: >-
           git
-          make
+          mingw-w64-x86_64-make
           mingw-w64-x86_64-gcc
           mingw-w64-x86_64-SDL2
           mingw-w64-x86_64-SDL2_mixer
@@ -37,4 +37,4 @@ jobs:
           mingw-w64-x86_64-libzip
     
     - name: make
-      run: make -C mingw/x86_64/
+      run: mingw32-make -C mingw/x86_64/
